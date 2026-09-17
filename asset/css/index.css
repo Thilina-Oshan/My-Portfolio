@@ -42,15 +42,22 @@ a {
    2. NAVBAR & BRAND STYLES
    ========================================================================== */
 .navbar-custom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     padding: 0.8rem 0;
     background: rgba(255, 253, 246, 0.95);
     backdrop-filter: blur(6px);
-    position: sticky;
-    top: 0;
-    z-index: 50;
+    -webkit-backdrop-filter: blur(6px); /* Safari support */
+    z-index: 1030; /* High z-index to stay above content */
     border-bottom: 2px solid #20223B10;
 }
 
+/* Add padding to the top of body so content isn't covered by the fixed navbar */
+body {
+    padding-top: 70px; 
+}
 /* Flexbox wrapper to pair logo image and brand name on the left */
 .navbar-brand-group {
     display: flex;
