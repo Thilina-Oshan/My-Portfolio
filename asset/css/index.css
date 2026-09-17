@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Ensures smooth scroll stops cleanly below fixed navbar */
 }
 
 body {
@@ -28,6 +29,7 @@ body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     overflow-x: hidden;
+    padding-top: 75px; /* Offset for fixed header */
 }
 
 h1, h2, h3, .brand {
@@ -48,25 +50,19 @@ a {
     width: 100%;
     padding: 0.8rem 0;
     background: rgba(255, 253, 246, 0.95);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px); /* Safari support */
-    z-index: 1030; /* High z-index to stay above content */
-    border-bottom: 2px solid #20223B10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 1030;
+    border-bottom: 2px solid rgba(32, 34, 59, 0.06);
 }
 
-/* Add padding to the top of body so content isn't covered by the fixed navbar */
-body {
-    padding-top: 70px; 
-}
-/* Flexbox wrapper to pair logo image and brand name on the left */
 .navbar-brand-group {
     display: flex;
     align-items: center;
-    gap: 10px; /* Small spacing between logo and text */
+    gap: 10px;
     text-decoration: none;
 }
 
-/* Controls logo dimensions to prevent navigation distortion */
 .logo-img {
     height: 38px;
     width: auto;
@@ -74,7 +70,6 @@ body {
     border-radius: 6px;
 }
 
-/* Brand text styling */
 .brand {
     font-weight: 700;
     font-size: 1.3rem;
@@ -86,7 +81,6 @@ body {
     color: var(--violet);
 }
 
-/* Custom navigation links with animated bottom borders */
 .nav-link-custom {
     color: var(--ink) !important;
     font-weight: 500;
@@ -112,15 +106,24 @@ body {
     width: 100%;
 }
 
+/* Toggler Custom Focus */
+.navbar-toggler {
+    border: 2px solid var(--ink);
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 /* ==========================================================================
    3. HERO SECTION
    ========================================================================== */
 .hero {
-    padding: 5.5rem 0 4rem;
+    padding: 3.5rem 0 4rem;
     position: relative;
 }
 
-/* Background gradient blob behind hero content */
 .hero-blob {
     position: absolute;
     right: -60px;
@@ -168,7 +171,6 @@ body {
     color: #3d3f5c;
 }
 
-/* Action button component styles */
 .btn-playful {
     background: var(--ink);
     color: #fff;
@@ -201,7 +203,6 @@ body {
     color: #fff;
 }
 
-/* Interactive Code Snippet Card */
 .code-card {
     background: var(--ink);
     color: #dfe3ff;
@@ -212,6 +213,7 @@ body {
     line-height: 1.7;
     box-shadow: 14px 14px 0 var(--sun);
     transform: rotate(2deg);
+    word-break: break-word;
 }
 
 .code-card .kw { color: #ff9d76; }
@@ -222,7 +224,7 @@ body {
    4. SECTIONS & LAYOUT COMPONENTS
    ========================================================================== */
 section {
-    padding: 5rem 0;
+    padding: 4.5rem 0;
 }
 
 .section-tag {
@@ -238,10 +240,9 @@ h2.section-title {
     margin-bottom: 1.6rem;
 }
 
-/* About Section Flex Grid */
 .about-wrap {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     flex-wrap: wrap;
     align-items: flex-start;
 }
@@ -263,7 +264,7 @@ h2.section-title {
     background: var(--card3);
     border-radius: 16px;
     padding: 1.4rem;
-    flex: 1 1 200px;
+    flex: 1 1 140px;
     text-align: center;
 }
 
@@ -273,7 +274,6 @@ h2.section-title {
     margin-bottom: 0.2rem;
 }
 
-/* Skills Section Badges */
 .skill-pill {
     display: inline-flex;
     align-items: center;
@@ -327,7 +327,6 @@ h2.section-title {
     border: 1px solid rgba(32, 34, 59, 0.18);
 }
 
-/* Accent Card Shadows */
 .card-accent-1 { box-shadow: 6px 6px 0 var(--violet); }
 .card-accent-2 { box-shadow: 6px 6px 0 var(--coral); }
 .card-accent-3 { box-shadow: 6px 6px 0 var(--teal); }
@@ -382,12 +381,16 @@ h2.section-title {
 .contact-links {
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    flex-wrap: wrap;
 }
 
 .contact-links a {
     color: #fff;
     font-weight: 600;
-    margin: 0 0.8rem;
     font-size: 1.05rem;
     border-bottom: 2px solid var(--sun);
 }
@@ -398,31 +401,95 @@ h2.section-title {
 
 footer {
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     color: #7b7d9b;
     font-size: 0.9rem;
 }
 
 /* ==========================================================================
-   7. MEDIA QUERIES & RESPONSIVENESS
+   7. FULL RESPONSIVE MEDIA QUERIES
    ========================================================================== */
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 65px;
+    }
+
+    /* Clean Expanded Mobile Menu Styling */
+    .navbar-collapse {
+        background: rgba(255, 253, 246, 0.98);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        margin-top: 0.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(32, 34, 59, 0.08);
+    }
+
     .nav-link-custom {
         margin-left: 0;
-        margin-bottom: 0.8rem;
+        display: block;
+        padding: 0.6rem 0;
+        font-size: 1.05rem;
+        border-bottom: 1px solid rgba(32, 34, 59, 0.05);
+    }
+
+    .nav-link-custom::after {
+        display: none;
+    }
+
+    /* Hero Responsive Adjustments */
+    .hero {
+        padding: 2rem 0 3rem;
     }
 
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+    }
+
+    .hero p.lead-text {
+        font-size: 1rem;
+    }
+
+    .hero-blob {
+        width: 280px;
+        height: 280px;
+        right: -20px;
+        top: -20px;
     }
 
     .code-card {
         transform: none;
         box-shadow: 8px 8px 0 var(--sun);
+        margin-top: 1rem;
+        padding: 1.2rem;
+        font-size: 0.85rem;
     }
 
-    .hero-blob {
-        width: 320px;
-        height: 320px;
+    .stat-row {
+        width: 100%;
+    }
+
+    .contact-band {
+        padding: 2.5rem 1.2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-playful, .btn-outline-playful {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.8rem;
+    }
+
+    .btn-playful.me-3 {
+        margin-right: 0 !important;
     }
 }
