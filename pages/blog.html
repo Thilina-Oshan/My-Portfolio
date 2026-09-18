@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Thilina Oshan Demel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="/asset/css/index.css">
-<link rel="stylesheet" href="/asset/css/blog.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Thilina Oshan Demel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/asset/css/index.css">
+  <link rel="stylesheet" href="/asset/css/blog.css">
 </head>
+
 <body>
 
-<nav class="navbar navbar-custom navbar-expand-md">
+  <!-- Navbar Placeholder -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- <nav class="navbar navbar-custom navbar-expand-md">
   <div class="container d-flex justify-content-between align-items-center">
     <a class="brand" href="portfolio.html">Thilina<span>.</span></a>
     <div class="d-none d-md-flex">
@@ -23,136 +30,141 @@
       <a class="nav-link-custom" href="portfolio.html#contact">Contact</a>
     </div>
   </div>
-</nav>
+</nav> -->
 
-<header class="blog-hero">
-  <div class="blog-hero-blob"></div>
-  <div class="container">
-    <span class="eyebrow-tag">Notes from the code editor 📝</span>
-    <h1>The Blog</h1>
-    <p>Thoughts on Java, React, PHP and the everyday problem-solving that comes with building software.</p>
-  </div>
-</header>
-
-<main class="container">
-
-  <div class="featured-card">
-    <div class="inner">
-      <span class="post-tag">Featured</span>
-      <h3>Why I Still Reach for Java in 2026</h3>
-      <p>A look at where Java still shines in modern backend systems, and what keeps it relevant alongside newer frameworks.</p>
-      <div class="post-meta" style="color:#c9caee;">
-        <span>Thilina Oshan Demel · Sep 10, 2026 · 6 min read</span>
-        <a class="read-link" href="#">Read post →</a>
-      </div>
+  <header class="blog-hero">
+    <div class="blog-hero-blob"></div>
+    <div class="container">
+      <span class="eyebrow-tag">Notes from the code editor 📝</span>
+      <h1>The Blog</h1>
+      <p>Thoughts on Java, React, PHP and the everyday problem-solving that comes with building software.</p>
     </div>
-  </div>
+  </header>
 
-  <div class="filter-bar" id="filterBar">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="java">Java</button>
-    <button class="filter-btn" data-filter="web">Web Dev</button>
-    <button class="filter-btn" data-filter="react">React</button>
-    <button class="filter-btn" data-filter="career">Career</button>
-  </div>
+  <main class="container">
 
-  <div class="row g-4" id="postGrid">
-
-    <div class="col-md-6 col-lg-4 post-item" data-category="react">
-      <div class="post-card card-accent-1">
-        <span class="post-tag tag-react">React</span>
-        <h4>Managing State Without the Headache</h4>
-        <p>A practical comparison of useState, useReducer and context for small-to-medium React apps.</p>
-        <div class="post-meta"><span>Sep 5, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
+    <div class="featured-card">
+      <div class="inner">
+        <span class="post-tag">Featured</span>
+        <h3>Why I Still Reach for Java in 2026</h3>
+        <p>A look at where Java still shines in modern backend systems, and what keeps it relevant alongside newer
+          frameworks.</p>
+        <div class="post-meta" style="color:#c9caee;">
+          <span>Thilina Oshan Demel · Sep 10, 2026 · 6 min read</span>
+          <a class="read-link" href="#">Read post →</a>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-6 col-lg-4 post-item" data-category="web">
-      <div class="post-card card-accent-2">
-        <span class="post-tag tag-web">Web Dev</span>
-        <h4>Bootstrap 5.3: What's Actually New</h4>
-        <p>A rundown of the color modes, utility updates and form changes worth knowing about.</p>
-        <div class="post-meta"><span>Aug 28, 2026 · 4 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="web">Web Dev</button>
+      <button class="filter-btn" data-filter="react">React</button>
+      <button class="filter-btn" data-filter="career">Career</button>
     </div>
 
-    <div class="col-md-6 col-lg-4 post-item" data-category="java">
-      <div class="post-card card-accent-3">
-        <span class="post-tag tag-java">Java</span>
-        <h4>Clean Code Habits I Picked Up the Hard Way</h4>
-        <p>Small naming and structuring habits that saved me hours of debugging on later projects.</p>
-        <div class="post-meta"><span>Aug 20, 2026 · 7 min</span><a class="read-link" href="#">Read →</a></div>
+    <div class="row g-4" id="postGrid">
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="react">
+        <div class="post-card card-accent-1">
+          <span class="post-tag tag-react">React</span>
+          <h4>Managing State Without the Headache</h4>
+          <p>A practical comparison of useState, useReducer and context for small-to-medium React apps.</p>
+          <div class="post-meta"><span>Sep 5, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
       </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="web">
+        <div class="post-card card-accent-2">
+          <span class="post-tag tag-web">Web Dev</span>
+          <h4>Bootstrap 5.3: What's Actually New</h4>
+          <p>A rundown of the color modes, utility updates and form changes worth knowing about.</p>
+          <div class="post-meta"><span>Aug 28, 2026 · 4 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="java">
+        <div class="post-card card-accent-3">
+          <span class="post-tag tag-java">Java</span>
+          <h4>Clean Code Habits I Picked Up the Hard Way</h4>
+          <p>Small naming and structuring habits that saved me hours of debugging on later projects.</p>
+          <div class="post-meta"><span>Aug 20, 2026 · 7 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="career">
+        <div class="post-card card-accent-4">
+          <span class="post-tag tag-career">Career</span>
+          <h4>What I Learned Building My First Full-Stack Project</h4>
+          <p>Lessons from connecting a PHP backend to a React frontend for the first time.</p>
+          <div class="post-meta"><span>Aug 12, 2026 · 6 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="web">
+        <div class="post-card card-accent-1">
+          <span class="post-tag tag-web">Web Dev</span>
+          <h4>A Beginner-Friendly Guide to REST APIs</h4>
+          <p>Breaking down HTTP methods, status codes and endpoint design with real examples.</p>
+          <div class="post-meta"><span>Aug 3, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="java">
+        <div class="post-card card-accent-2">
+          <span class="post-tag tag-java">Java</span>
+          <h4>Getting Comfortable with Multithreading</h4>
+          <p>Notes on threads, synchronization and the bugs that taught me to respect concurrency.</p>
+          <div class="post-meta"><span>Jul 22, 2026 · 8 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="react">
+        <div class="post-card card-accent-3">
+          <span class="post-tag tag-react">React</span>
+          <h4>Building Reusable Components Without Overengineering</h4>
+          <p>Finding the line between DRY code and components that are too abstract to reason about.</p>
+          <div class="post-meta"><span>Jul 15, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 post-item" data-category="career">
+        <div class="post-card card-accent-4">
+          <span class="post-tag tag-career">Career</span>
+          <h4>How I Prep for Technical Interviews</h4>
+          <p>My routine for practicing problems, reviewing fundamentals, and staying calm under pressure.</p>
+          <div class="post-meta"><span>Jul 6, 2026 · 4 min</span><a class="read-link" href="#">Read →</a></div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="col-md-6 col-lg-4 post-item" data-category="career">
-      <div class="post-card card-accent-4">
-        <span class="post-tag tag-career">Career</span>
-        <h4>What I Learned Building My First Full-Stack Project</h4>
-        <p>Lessons from connecting a PHP backend to a React frontend for the first time.</p>
-        <div class="post-meta"><span>Aug 12, 2026 · 6 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
+    <p class="no-results" id="noResults">No posts in this category yet — check back soon.</p>
+
+    <div class="newsletter-band">
+      <h2>Get new posts in your inbox</h2>
+      <p>No spam — just new posts on Java, React, PHP and building software, whenever I publish one.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="you@example.com" id="newsletterEmail" required>
+        <button type="submit" class="btn-playful">Subscribe</button>
+      </form>
     </div>
 
-    <div class="col-md-6 col-lg-4 post-item" data-category="web">
-      <div class="post-card card-accent-1">
-        <span class="post-tag tag-web">Web Dev</span>
-        <h4>A Beginner-Friendly Guide to REST APIs</h4>
-        <p>Breaking down HTTP methods, status codes and endpoint design with real examples.</p>
-        <div class="post-meta"><span>Aug 3, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
-    </div>
+  </main>
 
-    <div class="col-md-6 col-lg-4 post-item" data-category="java">
-      <div class="post-card card-accent-2">
-        <span class="post-tag tag-java">Java</span>
-        <h4>Getting Comfortable with Multithreading</h4>
-        <p>Notes on threads, synchronization and the bugs that taught me to respect concurrency.</p>
-        <div class="post-meta"><span>Jul 22, 2026 · 8 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4 post-item" data-category="react">
-      <div class="post-card card-accent-3">
-        <span class="post-tag tag-react">React</span>
-        <h4>Building Reusable Components Without Overengineering</h4>
-        <p>Finding the line between DRY code and components that are too abstract to reason about.</p>
-        <div class="post-meta"><span>Jul 15, 2026 · 5 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
-    </div>
-
-    <div class="col-md-6 col-lg-4 post-item" data-category="career">
-      <div class="post-card card-accent-4">
-        <span class="post-tag tag-career">Career</span>
-        <h4>How I Prep for Technical Interviews</h4>
-        <p>My routine for practicing problems, reviewing fundamentals, and staying calm under pressure.</p>
-        <div class="post-meta"><span>Jul 6, 2026 · 4 min</span><a class="read-link" href="#">Read →</a></div>
-      </div>
-    </div>
-
-  </div>
-
-  <p class="no-results" id="noResults">No posts in this category yet — check back soon.</p>
-
-  <div class="newsletter-band">
-    <h2>Get new posts in your inbox</h2>
-    <p>No spam — just new posts on Java, React, PHP and building software, whenever I publish one.</p>
-    <form class="newsletter-form" id="newsletterForm">
-      <input type="email" placeholder="you@example.com" id="newsletterEmail" required>
-      <button type="submit" class="btn-playful">Subscribe</button>
-    </form>
-  </div>
-
-</main>
-
-<footer>
+  <!-- <footer>
   &copy; 2026 Thilina Oshan Demel. Built with HTML, CSS, JS &amp; Bootstrap 5.
-</footer>
+</footer> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
-<script src="/asset/js/main.js"></script>
-<script src="/asset/js/blog.js"></script>
+  <!-- Footer Placeholder -->
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="/asset/js/main.js"></script>
+  <script src="/asset/js/blog.js"></script>
 
 
 </body>
+
 </html>
