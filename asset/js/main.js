@@ -45,6 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 2. Load Navbar with auto-close callback, then load Footer
-    includeHTML("navbar-placeholder", "./includes/navbar.html", initMobileNavAutoClose);
-    includeHTML("footer-placeholder", "./includes/footer.html");
+    includeHTML("navbar-placeholder", "includes/navbar.html", initMobileNavAutoClose);
+    includeHTML("footer-placeholder", "includes/footer.html");
 });
