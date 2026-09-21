@@ -20,7 +20,8 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 80px; /* Ensures smooth scroll stops cleanly below fixed navbar */
+    scroll-padding-top: 80px;
+    /* Ensures smooth scroll stops cleanly below fixed navbar */
 }
 
 body {
@@ -29,10 +30,14 @@ body {
     font-family: 'Work Sans', sans-serif;
     margin: 0;
     overflow-x: hidden;
-    padding-top: 75px; /* Offset for fixed header */
+    padding-top: 75px;
+    /* Offset for fixed header */
 }
 
-h1, h2, h3, .brand {
+h1,
+h2,
+h3,
+.brand {
     font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -41,7 +46,7 @@ a {
 }
 
 /* ==========================================================================
-   2. NAVBAR & BRAND STYLES
+   NAVBAR & BRAND STYLES
    ========================================================================== */
 .navbar-custom {
     position: fixed;
@@ -57,22 +62,16 @@ a {
 }
 
 .navbar-brand-group {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 10px;
     text-decoration: none;
 }
 
-.logo-img {
-    height: 38px;
-    width: auto;
-    object-fit: contain;
-    border-radius: 6px;
-}
-
 .brand {
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.35rem;
     color: var(--ink);
     line-height: 1;
 }
@@ -88,8 +87,10 @@ a {
     position: relative;
     display: inline-block;
     padding: 0.4rem 0;
+    transition: color 0.2s ease;
 }
 
+/* Dynamic Hover Underline (Desktop) */
 .nav-link-custom::after {
     content: "";
     position: absolute;
@@ -106,14 +107,57 @@ a {
     width: 100%;
 }
 
-/* Toggler Custom Focus */
+/* Custom Toggler Focus & Border */
 .navbar-toggler {
     border: 2px solid var(--ink);
-    padding: 0.25rem 0.5rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE ADJUSTMENTS (< 768px)
+   ========================================================================== */
+@media (max-width: 767.98px) {
+    .navbar-collapse {
+        background: #FFFDF6;
+        padding: 1rem 1.25rem;
+        border-radius: 12px;
+        margin-top: 0.75rem;
+        border: 2px solid var(--ink);
+        box-shadow: 6px 6px 0px var(--sun);
+    }
+
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-link-custom {
+        margin-left: 0;
+        display: block;
+        padding: 0.65rem 0;
+        font-size: 1.05rem;
+        border-bottom: 1px solid rgba(32, 34, 59, 0.08);
+    }
+
+    .nav-link-custom:last-child {
+        border-bottom: none;
+    }
+
+    /* Disable underline animation on mobile and highlight background instead */
+    .nav-link-custom::after {
+        display: none;
+    }
+
+    .nav-link-custom:hover {
+        color: var(--violet) !important;
+        padding-left: 0.4rem;
+    }
 }
 
 /* ==========================================================================
@@ -216,9 +260,17 @@ a {
     word-break: break-word;
 }
 
-.code-card .kw { color: #ff9d76; }
-.code-card .str { color: #8be9c1; }
-.code-card .fn { color: #8ecbff; }
+.code-card .kw {
+    color: #ff9d76;
+}
+
+.code-card .str {
+    color: #8be9c1;
+}
+
+.code-card .fn {
+    color: #8ecbff;
+}
 
 /* ==========================================================================
    4. SECTIONS & LAYOUT COMPONENTS
@@ -285,10 +337,25 @@ h2.section-title {
     font-size: 1rem;
 }
 
-.p1 { background: var(--card1); color: var(--violet); }
-.p2 { background: var(--card2); color: var(--coral); }
-.p3 { background: var(--card3); color: var(--teal); }
-.p4 { background: var(--card4); color: #B5820A; }
+.p1 {
+    background: var(--card1);
+    color: var(--violet);
+}
+
+.p2 {
+    background: var(--card2);
+    color: var(--coral);
+}
+
+.p3 {
+    background: var(--card3);
+    color: var(--teal);
+}
+
+.p4 {
+    background: var(--card4);
+    color: #B5820A;
+}
 
 /* ==========================================================================
    5. PROJECT CARDS
@@ -327,10 +394,21 @@ h2.section-title {
     border: 1px solid rgba(32, 34, 59, 0.18);
 }
 
-.card-accent-1 { box-shadow: 6px 6px 0 var(--violet); }
-.card-accent-2 { box-shadow: 6px 6px 0 var(--coral); }
-.card-accent-3 { box-shadow: 6px 6px 0 var(--teal); }
-.card-accent-4 { box-shadow: 6px 6px 0 var(--sun); }
+.card-accent-1 {
+    box-shadow: 6px 6px 0 var(--violet);
+}
+
+.card-accent-2 {
+    box-shadow: 6px 6px 0 var(--coral);
+}
+
+.card-accent-3 {
+    box-shadow: 6px 6px 0 var(--teal);
+}
+
+.card-accent-4 {
+    box-shadow: 6px 6px 0 var(--sun);
+}
 
 .project-link {
     font-weight: 600;
@@ -483,7 +561,8 @@ footer {
         font-size: 1.8rem;
     }
 
-    .btn-playful, .btn-outline-playful {
+    .btn-playful,
+    .btn-outline-playful {
         width: 100%;
         text-align: center;
         margin-bottom: 0.8rem;
